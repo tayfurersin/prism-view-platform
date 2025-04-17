@@ -15,6 +15,7 @@ import Dashboard from "./pages/Dashboard";
 import Charts from "./pages/Charts";
 import AdminPage from "./pages/Admin";
 import ProfilePage from "./pages/Profile";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
                   <Route path="/charts" element={<Charts />} />
                   <Route path="/admin" element={<AdminPage />} />
                   <Route path="/profile" element={<ProfilePage />} />
+                  <Route path="/settings" element={<Settings />} />
                   {/* Add more protected routes here */}
                 </Route>
                 
