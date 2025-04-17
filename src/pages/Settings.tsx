@@ -16,7 +16,7 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const Settings = () => {
   const { user } = useAuth();
-  const { t, changeLanguage, language } = useLanguage();
+  const { t, setLanguage, language } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const [emailNotifications, setEmailNotifications] = useState(true);
   const [productUpdates, setProductUpdates] = useState(true);
