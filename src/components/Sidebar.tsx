@@ -1,17 +1,16 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import { useAuth } from "@/context/AuthContext";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { 
-  LayoutDashboard, ChartPieIcon, User, Settings, Shield, LogOut, Menu, X, ChevronLeft, ChevronRight 
+  LayoutDashboard, ChartPieIcon, User, Settings, Shield, Menu, X, ChevronLeft, ChevronRight 
 } from "lucide-react";
 
 export const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
   const { t } = useLanguage();
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const location = useLocation();
   
   if (!user) return null;
@@ -97,11 +96,9 @@ export const Sidebar = () => {
 
         <div className="p-4 border-t border-sidebar-border">
           <button
-            onClick={logout}
+            onClick={() => {}}
             className="flex items-center gap-3 w-full px-3 py-2 rounded-md hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors"
           >
-            <LogOut size={20} />
-            {!collapsed && <span>{t('logout')}</span>}
           </button>
         </div>
       </aside>

@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 // Languages we support
@@ -20,7 +19,9 @@ type TranslationKey =
   | "submit"
   | "forgotPassword"
   | "newAccount"
-  | "alreadyHaveAccount";
+  | "alreadyHaveAccount"
+  | "products"
+  | "productsDescription";
 
 // Translation dictionaries
 const translations: Record<Language, Record<TranslationKey, string>> = {
@@ -39,7 +40,9 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     submit: "Submit",
     forgotPassword: "Forgot password?",
     newAccount: "Create new account",
-    alreadyHaveAccount: "Already have an account?"
+    alreadyHaveAccount: "Already have an account?",
+    products: "Our Products",
+    productsDescription: "Explore our range of premium solutions"
   },
   fr: {
     dashboard: "Tableau de bord",
@@ -56,7 +59,9 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     submit: "Soumettre",
     forgotPassword: "Mot de passe oublié?",
     newAccount: "Créer un nouveau compte",
-    alreadyHaveAccount: "Vous avez déjà un compte?"
+    alreadyHaveAccount: "Vous avez déjà un compte?",
+    products: "Nos Produits",
+    productsDescription: "Découvrez notre gamme de solutions premium"
   },
   es: {
     dashboard: "Panel",
@@ -73,7 +78,9 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     submit: "Enviar",
     forgotPassword: "¿Olvidó su contraseña?",
     newAccount: "Crear nueva cuenta",
-    alreadyHaveAccount: "¿Ya tienes una cuenta?"
+    alreadyHaveAccount: "¿Ya tienes una cuenta?",
+    products: "Nuestros Productos",
+    productsDescription: "Explore nuestra gama de soluciones premium"
   },
   de: {
     dashboard: "Dashboard",
@@ -90,7 +97,9 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     submit: "Absenden",
     forgotPassword: "Passwort vergessen?",
     newAccount: "Neues Konto erstellen",
-    alreadyHaveAccount: "Haben Sie bereits ein Konto?"
+    alreadyHaveAccount: "Haben Sie bereits ein Konto?",
+    products: "Unsere Produkte",
+    productsDescription: "Entdecken Sie unsere Premium-Lösungen"
   },
   zh: {
     dashboard: "仪表板",
@@ -106,8 +115,9 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     password: "密码",
     submit: "提交",
     forgotPassword: "忘记密码？",
-    newAccount: "创建新账户",
-    alreadyHaveAccount: "已有账户？"
+    newAccount: "已有账户？",
+    products: "我们的产品",
+    productsDescription: "探索我们的优质解决方案"
   }
 };
 
