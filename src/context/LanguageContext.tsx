@@ -115,7 +115,8 @@ const translations: Record<Language, Record<TranslationKey, string>> = {
     password: "密码",
     submit: "提交",
     forgotPassword: "忘记密码？",
-    newAccount: "已有账户？",
+    newAccount: "创建新账户",
+    alreadyHaveAccount: "已有账户？",
     products: "我们的产品",
     productsDescription: "探索我们的优质解决方案"
   }
